@@ -34,6 +34,7 @@ modules:
         - xsetroot
         - xrandr
         - jetbrains-mono-fonts
+        - jetbrains-mono-fonts-all
 
         # WM
         - i3
