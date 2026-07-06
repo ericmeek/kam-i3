@@ -6,8 +6,8 @@ name: kam-i3
 description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
-image-version: 42 # latest is also supported if you want new updates ASAP
+base-image: ghcr.io/ublue-os/base-main
+image-version: 44 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -23,14 +23,38 @@ modules:
         - atim/starship
     install:
       packages:
-        - micro
-        - starship
+        # login
+        - greetd
+        - tuigreet
+
+        # X11
+        - xorg-x11-server-Xorg
+        - xorg-x11-xinit
+        - xorg-x11-xauth
+        - xsetroot
+        - xrandr
+
+        # WM
+        - i3
+        - i3status
+        - i3lock
+        - rofi
+
+        # Utilities
+        - feh
+        - xterm
+        - emacs
+
+        # system
+        - dbus-tools
+
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
         # "firefox" is the main package, "firefox-langpacks" is a dependency
         - firefox
         - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+        - nano
 
   - type: default-flatpaks
     configurations:
@@ -43,3 +67,7 @@ modules:
       - scope: user # Also add Flathub user repo, but no user packages
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
+  - type: systemd
+    system:
+      enabled:
+        - greetd.service
