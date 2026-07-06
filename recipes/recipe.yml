@@ -33,6 +33,7 @@ modules:
         - xorg-x11-xauth
         - xsetroot
         - xrandr
+        - jetbrains-mono-fonts
 
         # WM
         - i3
@@ -47,6 +48,10 @@ modules:
 
         # system
         - dbus-tools
+        - xdg-desktop-portal
+        - xdg-desktop-portal-gtk
+        - polkit
+        - dunst
 
     remove:
       packages:
