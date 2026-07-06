@@ -1,0 +1,62 @@
+! -----------------------------
+! XTerm - Modern Look
+! -----------------------------
+
+XTerm*faceName: 0xProto Nerd Font Mono
+XTerm*faceSize: 14
+
+! Anti-aliasing
+Xft.antialias: true
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.rgba: rgb
+Xft.dpi: 96
+
+! Scrollback
+XTerm*saveLines: 100000
+
+! Bell
+XTerm*visualBell: false
+XTerm*bellIsUrgent: false
+
+! Cursor
+XTerm*cursorBlink: true
+XTerm*cursorColor: #7aa2f7
+
+! Internal padding
+XTerm*internalBorder: 10
+
+! Scrollbar
+XTerm*scrollBar: false
+
+! Dynamic title
+XTerm*dynamicColors: true
+XTerm*eightBitInput: false
+XTerm*metaSendsEscape: true
+
+! Background / Foreground
+XTerm*background: #1a1b26
+XTerm*foreground: #c0caf5
+
+! Selection
+XTerm*highlightColor: #3b4261
+XTerm*highlightTextColor: #c0caf5
+
+! ANSI Colors (Tokyo Night)
+*color0:  #15161e
+*color1:  #f7768e
+*color2:  #9ece6a
+*color3:  #e0af68
+*color4:  #7aa2f7
+*color5:  #bb9af7
+*color6:  #7dcfff
+*color7:  #a9b1d6
+
+*color8:  #414868
+*color9:  #ff899d
+*color10: #9fe044
+*color11: #faba4a
+*color12: #8db0ff
+*color13: #c7a9ff
+*color14: #89ddff
+*color15: #c0caf5
