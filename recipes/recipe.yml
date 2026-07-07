@@ -53,6 +53,10 @@ modules:
         - xdg-desktop-portal-gtk
         - polkit
         - dunst
+        - NetworkManager
+        - NetworkManager-wifi
+        - wpa_supplicant
+        - linux-firmware
 
     remove:
       packages:
