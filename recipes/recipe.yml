@@ -52,6 +52,7 @@ modules:
         - xdg-desktop-portal
         - xdg-desktop-portal-gtk
         - polkit
+        - lxqt-policykit
         - dunst
         - NetworkManager
         - NetworkManager-wifi
@@ -92,6 +93,7 @@ modules:
         install: # system flatpaks we want all users to have and not remove
           - org.mozilla.firefox
           - org.gnome.Loupe
+          - com.github.tchx84.Flatseal
       - scope: user # Also add Flathub user repo, but no user packages
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
@@ -103,3 +105,4 @@ modules:
         - virtnetworkd.service
         - virtstoraged.service
         - virtproxyd.service
+        - libvirtd.service
