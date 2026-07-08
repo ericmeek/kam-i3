@@ -47,7 +47,7 @@ modules:
         - xterm
         - emacs
 
-        # system
+        # System
         - dbus-tools
         - xdg-desktop-portal
         - xdg-desktop-portal-gtk
@@ -57,6 +57,23 @@ modules:
         - NetworkManager-wifi
         - wpa_supplicant
         - linux-firmware
+
+        # Virtualization
+        - libvirt
+        - libvirt-daemon
+        - libvirt-daemon-config-network
+        - libvirt-daemon-driver-qemu
+        - libvirt-daemon-driver-storage-core
+        - libvirt-daemon-driver-interface
+        - libvirt-daemon-driver-network
+        - qemu
+        - qemu-kvm
+        - qemu-img
+        - edk2-ovmf
+        - spice-server
+        - spice-vdagent
+        - dnsmasq
+        - gnome-boxes
 
     remove:
       packages:
@@ -81,3 +98,7 @@ modules:
     system:
       enabled:
         - greetd.service
+        - virtqemud.service
+        - virtnetworkd.service
+        - virtstoraged.service
+        - virtproxyd.service
