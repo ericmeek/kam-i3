@@ -74,6 +74,7 @@ modules:
         - spice-vdagent
         - dnsmasq
         - gnome-boxes
+        - virt-manager
 
     remove:
       packages:
