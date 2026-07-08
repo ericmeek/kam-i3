@@ -36,6 +36,7 @@ exec --no-startup-id nm-applet
 
 exec --no-startup-id dunst
 exec --no-startup-id "xrdb /home/eric/.Xresources"
+exec --no-startup-id "dbus-update-activation-environment --systemd --all"
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
