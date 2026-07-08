@@ -105,4 +105,3 @@ modules:
         - virtnetworkd.service
         - virtstoraged.service
         - virtproxyd.service
-        - libvirtd.service
