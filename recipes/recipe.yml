@@ -18,9 +18,6 @@ modules:
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
   - type: dnf
-    repos:
-      copr:
-        - atim/starship
     install:
       packages:
         # login
@@ -92,7 +89,6 @@ modules:
         # If no repo information is specified, Flathub will be used by default
         install: # system flatpaks we want all users to have and not remove
           - org.mozilla.firefox
-          - org.gnome.Loupe
           - com.github.tchx84.Flatseal
       - scope: user # Also add Flathub user repo, but no user packages
 
