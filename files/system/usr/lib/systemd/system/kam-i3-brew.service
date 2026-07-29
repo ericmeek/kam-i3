@@ -1,0 +1,14 @@
+[Unit]
+Description=Install Homebrew packages for kam-i3
+
+After=brew-setup.service
+Requires=brew-setup.service
+
+ConditionPathExists=!/var/lib/kam-i3/brew-packages-installed
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/kam-i3/install-brew-packages.sh
+
+[Install]
+WantedBy=multi-user.target

@@ -56,24 +56,6 @@ modules:
         - wpa_supplicant
         - linux-firmware
 
-        # Virtualization
-        - libvirt
-        - libvirt-daemon
-        - libvirt-daemon-config-network
-        - libvirt-daemon-driver-qemu
-        - libvirt-daemon-driver-storage-core
-        - libvirt-daemon-driver-interface
-        - libvirt-daemon-driver-network
-        - qemu
-        - qemu-kvm
-        - qemu-img
-        - edk2-ovmf
-        - spice-server
-        - spice-vdagent
-        - dnsmasq
-        - gnome-boxes
-        - virt-manager
-
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
@@ -88,16 +70,20 @@ modules:
         scope: system
         # If no repo information is specified, Flathub will be used by default
         install: # system flatpaks we want all users to have and not remove
-          - org.mozilla.firefox
           - com.github.tchx84.Flatseal
+          - org.pulseaudio.pavucontrol
+          - com.google.Chrome
+          - com.moonlight_stream.Moonlight
+          - org.sabnzbd.sabnzbd
       - scope: user # Also add Flathub user repo, but no user packages
+
+  - type: brew
+    nofile-limits:true
+    brew-analytics: false
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
   - type: systemd
     system:
       enabled:
         - greetd.service
-        - virtqemud.service
-        - virtnetworkd.service
-        - virtstoraged.service
-        - virtproxyd.service
+        - kam-i3-brew.service
