@@ -75,6 +75,7 @@ modules:
           - com.google.Chrome
           - com.moonlight_stream.Moonlight
           - org.sabnzbd.sabnzbd
+          - org.remmina.Remmina
       - scope: user # Also add Flathub user repo, but no user packages
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
